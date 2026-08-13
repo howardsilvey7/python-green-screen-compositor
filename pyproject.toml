@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-green-screen-compositor"
+version = "1.0.0"
+description = "A reproducible Python bitmap green-screen compositor refactored from an earlier pixel-processing exercise."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "Howard R. Silvey" }
+]
+dependencies = [
+  "Pillow>=10.0,<13"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8,<10",
+  "ruff>=0.6,<1"
+]
+
+[project.scripts]
+green-screen = "green_screen.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
