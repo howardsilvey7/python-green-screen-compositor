@@ -1,6 +1,6 @@
-![Tests](https://github.com/howardsilvey7/python-green-screen-compositor/actions/workflows/tests.yml/badge.svg)
-
 # Python Green-Screen Bitmap Compositor
+
+![Tests](https://github.com/howardsilvey7/python-green-screen-compositor/actions/workflows/tests.yml/badge.svg)
 
 A compact Python image-processing project that removes a fixed green-screen colour from supplied foreground bitmaps and composites the remaining pixels over a selected background.
 
